@@ -1,0 +1,171 @@
+/* App.css */
+
+/* General */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0e0e10; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navegación */
+nav {
+  background-color: #1a1a1b; /* Fondo del menú */
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #a3ff12; /* Verde Kick */
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ffffff; /* Cambia a blanco al pasar el mouse */
+}
+
+/* Contenedor principal */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Botones */
+button {
+  background-color: #a3ff12;
+  border: none;
+  color: #0e0e10;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #89d80f; /* Verde más oscuro */
+}
+
+/* Inputs */
+input {
+  width: calc(50% - 10px);
+  padding: 0.5rem;
+  margin: 0.5rem 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+/* Selectores */
+select {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: black;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  appearance: none; /* Elimina el estilo por defecto del navegador */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Tablas y listas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #1a1a1b;
+  color: #ffffff;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: #27272a; /* Un poco más oscuro */
+  color: #a3ff12; /* Verde para títulos */
+}
+
+tr:nth-child(even) {
+  background-color: #1f1f1f; /* Alterna filas */
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  background-color: #1a1a1b;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  input {
+    width: calc(100% - 10px);
+    margin: 0.5rem 0;
+  }
+
+  button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  select {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}
