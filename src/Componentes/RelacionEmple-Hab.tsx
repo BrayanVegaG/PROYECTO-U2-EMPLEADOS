@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 interface RelacionHabilidadesEmpleadosProps {
   empleados: Empleado[];
   habilidades: Habilidad[];
+  relaciones: Relacion[];
+  setRelaciones: React.Dispatch<React.SetStateAction<Relacion[]>>;
 }
 
 interface Empleado {
@@ -23,8 +25,7 @@ interface Relacion {
   id_habilidad: number;
 }
 
-const RelacionHabilidadesEmpleados: React.FC<RelacionHabilidadesEmpleadosProps> = ({ empleados, habilidades }) => {
-  const [relaciones, setRelaciones] = useState<Relacion[]>([]);
+const RelacionHabilidadesEmpleados: React.FC<RelacionHabilidadesEmpleadosProps> = ({ empleados, habilidades, relaciones, setRelaciones }) => {
   const [nuevaRelacion, setNuevaRelacion] = useState<Relacion>({ id_empleado: 0, id_habilidad: 0 });
   const [editIndex, setEditIndex] = useState<number | null>(null);
 
